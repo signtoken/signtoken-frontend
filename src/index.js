@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import Home from './controllers/Home';
 import reportWebVitals from './reportWebVitals';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { ToastProvider } from 'react-toast-notifications';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ToastProvider autoDismiss={true} placement="bottom-center">
+      <Home />
+    </ToastProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
